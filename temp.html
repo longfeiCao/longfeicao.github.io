@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>小程序模板列表</title>
+    <script src="//kch.faisys.com/js/comm/jquery/jquery-core.min.js?v=202109221525"></script>
+</head>
+
+<body>
+    <div id="websiteModel">
+        <iframe id="mainweb" name="mainweb" src="https://yingzhankc.com/iframe/appletModel.jsp?modelType='appletModel'"
+            height="1000px" width="100%;" frameborder="0" scrolling="no" allowTransparency="true"></iframe>
+        <div class="footer"></div>
+        <script type="text/javascript">
+            $(function () {
+                //用监听来获取子frame的高度
+                if (typeof window.addEventListener != 'undefined') {
+                    window.addEventListener('message', function (e) {
+                        if (typeof e.data == 'number') {
+                            $('#mainweb').css('height', e.data);
+                        }
+                    })
+                } else if (typeof window.attachEvent != 'undefined') {
+                    window.attachEvent('message', function (e) {
+                        if (typeof e.data == 'number') {
+                            $('#mainweb').css('height', e.data);
+                        }
+                    })
+                }
+
+
+                $(window).scroll(function () {
+                    var parentScrollTop = $(window).scrollTop() + $(window).height() - $('.footer').get(0).clientHeight;
+                    window.frames['mainweb'].postMessage(parentScrollTop, "*");
+                });
+            })
+        </script>
+        <script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
+        <script>LA.init({ id: "Jhp7kUb6rsZu77mu", ck: "Jhp7kUb6rsZu77mu" })</script>
+    </div>
+    <style>
+
+    </style>
+</body>
+
+</html>
