@@ -417,6 +417,7 @@ p:last-child {
 	transform: translateY(-98%);
 	opacity: 1;
 	visibility: visible;
+	background: orange;
 }
 
 .go-top i {
@@ -455,6 +456,7 @@ p:last-child {
 
 .go-top:hover, .go-top:focus {
 	color: #ffffff;
+	background: #999;
 }
 
 .go-top:hover::before, .go-top:focus::before {

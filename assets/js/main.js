@@ -102,8 +102,8 @@
             smartSpeed: 1000,
             margin: 20,
             navText: [
-                "<i class='fa fa-chevron-left'></i>",
-                "<i class='fa fa-chevron-right'></i>"
+                '<svg t="1664269570177" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4949" width="26" height="26"><path d="M378.24 512l418.88 418.88L704 1024 192 512l512-512 93.12 93.12z" fill="#262626" p-id="4950"></path></svg>',
+                '<svg t="1664269530744" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3987" width="26" height="26"><path d="M610.88 512L192 93.12 285.12 0l512 512-512 512L192 930.88z" fill="#262626" p-id="3988"></path></svg>',
             ],
 			responsive: {
                 0: {
